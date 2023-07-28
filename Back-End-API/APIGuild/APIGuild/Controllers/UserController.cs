@@ -26,7 +26,7 @@ namespace APIGuild.Controllers
             user.Login = login;
             user.Password = password;
 
-            _context.Add(user);
+            _context.Users.Add(user);
             _context.SaveChanges();
 
             return CreatedAtAction("GetUser", new { id = user.ID }, user);
@@ -35,7 +35,7 @@ namespace APIGuild.Controllers
         [HttpGet]
         public IActionResult GetUser(string login, string pass)
         {
-            User userDb = _context.Users.First(u=> u.Login == login && u.Password == pass);
+            User userDb = _context.Users.First(u => u.Login == login && u.Password == pass);
 
             if (userDb == null)
             {

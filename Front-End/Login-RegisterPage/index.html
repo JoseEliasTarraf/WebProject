@@ -18,17 +18,20 @@
                 <h1>LOGIN</h1>
                 <div class="text-field">
                     <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuário">
+                    <a class="hidden" id="userHide" >O Campo "Usuário" Precisa ser preenchido</a>
                 </div>
                 <div class="text-field">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" name="senha" id="senha" placeholder="Senha">
+                    <a class="hidden" id="passHide" >O Campo "Senha" Precisa ser preenchido</a>
                 </div>
-                <button class="btn-login">Login</button>
-                <button class="btn-invite">Entrar como Convidado</button>
+                <button class="btn-login" id="btnLogin">Login</button>
+                <a class="btn-invite" href="../Home/index.html" target="_blank">Entrar como Convidado</a>
                 <a class="btn-invite" href="register.html">Registrar</a>
             </div>
         </div>
     </div>
+    <script src="Scripts/userScript.js"></script>
 </body>
 </html>

@@ -14,8 +14,8 @@ body{
     align-items: center;
 }
 
-.left-login{
-    width: 50%;
+.left-content{
+    width: 50vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -33,8 +33,8 @@ body{
     padding: 0px 50px;
 }
 
-.right-login{
-    width: 50%;
+.right-content{
+    width: 100vw;
     height: 100vh;
     padding-left: 100px;
     display: flex;
@@ -43,7 +43,7 @@ body{
 }
 
 .card-login{
-    width: 30%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,10 +113,6 @@ a{
     outline: none;
     color: rgba(255, 255, 255, 0.397);
     text-decoration: none;
-}
-
-.hidden{
-    display: none;
 }
 
 .btn-invite{
