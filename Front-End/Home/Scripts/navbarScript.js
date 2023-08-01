@@ -1,18 +1,19 @@
 const userDataString = localStorage.getItem("userData");
 var userData = JSON.parse(userDataString);
 
-const loginElement = document.getElementById("loginPage");
-const profileElement = document.getElementById("profile");
+
+const navbar = document.getElementById("navbarC");
+const loginElement = document.createElement('li');
+const profileElement = document.createElement('li');
 
 if (userData && userData.id != null) {
-  profileElement.classList.remove("hidden");
-  profileElement.classList.add("links");
-  loginElement.classList.add("hidden");
-  console.log(userData.login);
+  profileElement.textContent = userData.login;
+  profileElement.classList.add('navbar');
+  navbar.appendChild(profileElement);
 } else {
-  profileElement.classList.add("hidden");
-  loginElement.classList.remove("hidden");
-  loginElement.classList.add("links");
+  loginElement.textContent = 'Login';
+  loginElement.classList.add('navbar');
+  navbar.appendChild(loginElement);
 }
 
 profileElement.addEventListener("click", (e) => {

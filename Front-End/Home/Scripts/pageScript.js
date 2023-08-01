@@ -45,7 +45,8 @@ recruitElement.addEventListener('click', (e) =>{
   e.preventDefault();
 
   if(userData && userData.id != null){
-    alert("Recruit Feito com Sucesso");
+    alert("Você sera redirecionado para o Recruit");
+    window.location.href="https://forms.gle/W5ZetQY7tH3twKwWA"
   }
   else{
     alert("Necessario fazer o Login");
